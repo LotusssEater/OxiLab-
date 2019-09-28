@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OxiLab | Discover</title>
+<link rel="icon" href="IMG/obeats.png" sizes="48x48" />
+<link href="CSS/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
+<link href="fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet" type="text/css" />
+<link href="CSS/discover.css" rel="stylesheet" type="text/css" />
+<link href="CSS/sidebar.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="sidebar">
+    <div class="toggle-btn">
+        <div class="containerLogo" onclick="myFunction(this);AbrirMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div id="lateral_derecho">
+        <ul>
+            <li> <a class="tooltippd" href="perfil.html"><i class="fas fa-user-circle"></i><span
+              class="tooltiptext">Perfil</span></a> </li>
+            <li> <a class="tooltippd" href="Signup.html"><i class="fa fa-power-off"></i><span
+              class="tooltiptext">Cerrar Sesion</span></a> </li>
+        </ul>
+    </div>
+    <ul>
+        <li> <a class="tooltip" href="Inicio.html"><i class="fas fa-home"></i><span
+            class="tooltiptext">Inicio</span></a> </li>
+        <li> <a class="tooltip" href="Comunity.html"><i class="fas fa-globe"></i><span
+            class="tooltiptext">Comunidad</span></a> </li>
+        <li> <a class="tooltip" href="Discover.html"><i class="fas fa-search"></i> <span class="tooltiptext">Explorar</span></a> </li>
+        <li> <a class="tooltip" href="Login.html"><i class="far fa-address-card"></i><span
+              class="tooltiptext">Iniciar Secion</span></a> </li>
+        <li> <a class="tooltip" href="Signup.html"><i class="far fa-address-book"></i><span
+              class="tooltiptext">Registrar</span></a> </li>
+    </ul>
+</div>
+<header class="sticky"> <a href="AboutUs.html"> <img id="logo" src="IMG/oxilab_icon.png" alt="logoxilab"> </a>
+    <div class="topnav"> <a href="#home">Inicio</a> <a href="#about">Novedades</a> <a href="#contact">Nosotros</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<div  id="noticias"  class="titulos">
+    <h2>Noticias</h2>
+</div>
+<a id="scrolldown" href="#section2"><i class="fas fa-angle-double-down"></i></a> <br>
+<br>
+<!-- Container for the image gallery -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="GALERIA/OliverTreeCarousel.png" alt="IMG_01" style="width:100%">
+        <div class="text">Nuevo Single de Oliver Tree Ya Disponible!</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="GALERIA/LoFI2.png" alt="IMG_02" style="width:100%">
+        <div class="text">Lofi expo todos los Domingos  las 7pm en Youtube</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="GALERIA/JoeyPicoRaro.png" alt="IMG_03" style="width:100%">
+        <div class="text">Nuevo Single de Joey Pecoraro - Tired Boy</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="GALERIA/BROCKHAMPTON2.png" alt="IMG_04" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="GALERIA/Knobs2.png" alt="IMG_05" style="width:100%">
+        <div class="text">Proximamente Cursos de mastering y Produccion Digital</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="GALERIA/space.png" alt="IMG_06" style="width:100%">
+        <div class="text">"Space.s" Sera el nuevo label para Artistas Independientes</div>
+    </div>
+</div>
+<br>
+<div id="Dots" > <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> </div>
+<div  id="section2" class="titulos">
+    <h2 style="padding-top: 10px">Sample Packs</h2>
+</div>
+<div id="sample_pack">
+    <div> 
+        <!-- samp[lessssss] -->
+        <div class="flex-container-samples" style="background-color: rgb(49, 12, 85)">
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/urban.jpg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Urban Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/aesthetic.jpeg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Aesthetic Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/japan.jpg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Japan Rising Sun Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/amsterdam.jpg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Amsterdam Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/PuenteAlto.png" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Puente Alto Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/rialto.jpg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Rialto Venecia Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/Caribbean.png" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Caribbean House Sample Pack</p>
+                </div>
+            </div>
+            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/TompaBeats.jpeg" alt="Avatar" class="imageSample">
+                <div class="overlaySample">
+                    <p class="textSample">Lofi Sample Pack</p>
+                </div>
+            </div>
+        </div>
+        <!-- samp[lessssss] --> 
+    </div>
+</div>
+<br>
+<a id="scrollup" href="#noticias"><i class="fas fa-angle-double-up"></i></a> <br>
+<br>
+<footer id="foot"> <br>
+    <div class="foot_izquierdo">
+        <h3>El miguel la chupa!</h3>
+        <br>
+        El miguel la chupa, y bastante, todo el dia chupando y robando waifus. </div>
+    <div class="foot_centro"> <img id="icono_footer" src="IMG/oxilab_icon.png" alt="logoxilab">
+        <div class="social-bar-foot"> <a href="https://m.facebook.com/login/?locale2=es_ES" target="_blank"><i class="fab fa-facebook-square"></i></a> <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-discord"></i></a> <a href="https://www.youtube.com/?hl=es-419&gl=CL" target="_blank"><i class="fab fa-youtube"></i></a> <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn?" target="_blank"><i class="fab fa-spotify"></i></a> </div>
+    </div>
+    <div class="foot_derecho">
+        <h3 >Importante!</h3>
+        <br>
+        Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical</div>
+    <br>
+</footer>
+<script src="JS/discover.js"></script>
+</body>
+</html>

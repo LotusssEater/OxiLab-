@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OxiLab | Home</title>
+<link rel="icon" href="IMG/obeats.png" sizes="48x48" />
+<link href="CSS/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
+<link href="fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet" type="text/css" />
+<link href="CSS/inicio.css" rel="stylesheet" type="text/css" />
+<link href="CSS/sidebar.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
+<script src="JS/jquery-3.4.1.js"></script>
+<script src="bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id="sidebar">
+    <div class="toggle-btn">
+        <div class="containerLogo" onclick="myFunction(this);AbrirMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div id="lateral_derecho">
+        <ul>
+            <li> <a class="tooltippd" href="perfil.html"><i class="fas fa-user-circle" ></i><span
+              class="tooltiptext">Perfil</span></a></li>
+            
+            <li> <a class="tooltippd" href="Signup.html"><i class="fa fa-power-off"></i><span
+              class="tooltiptext">Cerrar Sesion</span></a> </li>
+        </ul>
+    </div>
+    <ul>
+        <li> <a class="tooltip" href="Inicio.html"><i class="fas fa-home"></i><span
+            class="tooltiptext">Inicio</span></a> </li>
+        <li> <a class="tooltip" href="Comunity.html"><i class="fas fa-globe"></i><span
+            class="tooltiptext">Comunidad</span></a> </li>
+        <li> <a class="tooltip" href="Discover.html"><i class="fas fa-search"></i> <span class="tooltiptext">Explorar</span></a> </li>
+        <li> <a class="tooltip" href="Login.html"><i class="far fa-address-card"></i><span
+              class="tooltiptext">Iniciar Secion</span></a> </li>
+        <li> <a class="tooltip" href="Signup.html"><i class="far fa-address-book"></i><span
+              class="tooltiptext">Registrar</span></a> </li>
+    </ul>
+</div>
+<header class="sticky"> <a href="AboutUs.html"> <img id="logo" src="IMG/oxilab_icon.png" alt="logoxilab"> </a>
+    <div class="topnav"> <a href="#home">Inicio</a> <a href="#about">Novedades</a> <a href="#contact">Nosotros</a>
+        <div class="search-container">
+            <form autocomplete="off" action="/search.html">
+                <div class="autocomplete">
+                    
+                    <input id="myInput" type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<div id="coaching">
+    <div class="togglec-btn">
+        <div class="containerLogo" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <p> panel Coach </p>
+</div>
+<!-- asdsdfsdfgsdgfhsdfgsdgf -->
+<div id="remixes">
+    <div class="toggler-btn">
+        <div class="containerLogo" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <p> panel Remix </p>
+</div>
+<div class="descripcion">
+    <p style="margin-left: 20px;margin-right: 20px;"> Crea, Comparte y Descubre nuevos Artistas junto con sus ultimos lanzamientos. <br>
+        Noticias y Novedades relacionados a tus artistas favoritos </p>
+</div>
+<div class="titulos">
+    <h2 id="section1" style="padding-top: 10px">Mas escuchadas</h2>
+</div>
+<a id="scrolldown" href="#section2" ><i class="fa fa-angle-double-down"></i></a> <br>
+<br>
+<div class="flex-container-ye" style="background-color: rgb(49, 12, 85)">
+    <div class="containerSong" onclick="Reproducir()"> <img src="IMG/Brockhampton.jpg" alt="Avatar" class="imageSong">
+        <div class="overlaySong">
+            <p class="textSong">Brockhampton<br>
+                -<br>
+                SATURATION lll</p>
+        </div>
+    </div>
+    <div class="containerSong" onclick="Reproducir()"> <img src="IMG/Skin.jpg" alt="Avatar" class="imageSong">
+        <div class="overlaySong">
+            <p class="textSong">Flume<br>
+                -<br>
+                Skin</p>
+        </div>
+    </div>
+    <div class="containerSong" onclick="Reproducir()"> <img src="IMG/burgos%20'%20every%20step%20of%20the%20guey.jpg" alt="Avatar" class="imageSong">
+        <div class="overlaySong">
+            <p class="textSong">Burgos<br>
+                -<br>
+                Every Step Of The Guey</p>
+        </div>
+    </div>
+    <div class="containerSong" onclick="Reproducir()"> <img src="IMG/hiphop - cha cha - freddie dredd.png" alt="Avatar" class="imageSong">
+        <div class="overlaySong">
+            <p class="textSong">Freddie Dredd<br>
+                -<br>
+                Cha Cha</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="titulos">
+    <h2 id="section2" style="padding-top: 10px">Artistas Populares</h2>
+</div>
+<br>
+<div class="Artistas_populares" style="background-color: rgb(70, 30, 109)">
+    <div class="flex-container">
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/Medasin.jpeg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">1<br>
+                    Medasin</div>
+            </div>
+        </div>
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/RexOrangeCounty.jpeg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">2<br>
+                    Rex Orange County</div>
+            </div>
+        </div>
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/kudasaibeats.jpg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">3<br>
+                    KudasaiBeats</div>
+            </div>
+        </div>
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/lilxtra.jpg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">4<br>
+                    Lil Xtra</div>
+            </div>
+        </div>
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/Joji.jpeg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">5<br>
+                    Joji</div>
+            </div>
+        </div>
+        <div class="containerArtist" onclick="ParaArtistas()"> <img src="IMG/Mom%20Jeans.jpeg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">6<br>
+                    Mom Jeans</div>
+            </div>
+        </div>
+        <div class="containerArtist f" onclick="ParaArtistas()"> <img src="IMG/bsd.u.jpeg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">7<br>
+                    bsd.u</div>
+            </div>
+        </div>
+        <div class="containerArtist f" onclick="ParaArtistas()"> <img src="IMG/joey%20pecoraro.jpg" alt="Avatar" class="imageArtist">
+            <div class="overlayArtist">
+                <div class="textArtist">8<br>
+                    Joey Pecoraro</div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<a id="scrollup" href="#section1"><i class="fas fa-angle-double-up"></i></a> <br />
+<div id="reproductor_visualizador">
+    <audio controls id="reproductor">
+        <source id="cancion" src="songs/Ｄｅｓｐａｃｉｔｏ － Ｖａｐｏｒｗａｖｅ.mp3" type="audio/mpeg">
+    </audio>
+</div>
+<br> 
+<br>
+<footer id="foot"> <br>
+    <div class="foot_izquierdo">
+        <h3>Equipo de Desarrollo "oxilab"</h3><br>
+        <a href="AboutUs.html" style="color: aliceblue">Conoce al Equipo de Desarrollo</a><br>
+        <a href="search.html" style="color: aliceblue">Pagina en proceso</a>
+    </div>
+    <div class="foot_centro">
+        <img id="icono_footer" src="IMG/oxilab_icon.png" alt="logoxilab">
+        <div class="social-bar-foot">
+            <a href="https://m.facebook.com/login/?locale2=es_ES" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/?hl=es-419&gl=CL" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn?" target="_blank"><i class="fab fa-spotify"></i></a> 
+    </div>
+    </div>
+    <div class="foot_derecho"><h3 >Importante!</h3><br>
+Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical</div>
+    <br>
+</footer>
+<script src="JS/Containers_Interact.js"></script> 
+<script src="JS/main.js"></script>
+</body>
+</html>
