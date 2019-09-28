@@ -1,0 +1,141 @@
+/* Aplicar en todos los HTML */
+
+  /* Aplicar en todos los HTML */
+.card .datos{
+  padding-bottom: 5px;
+    color: aliceblue;
+    background-color: rgba(255, 0, 255, .15);
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+.datos b{
+    font-size: 70%;
+}
+.datos p{
+    font-size: 40%;
+}
+  
+  /* Card Cardo*/
+
+.containerCARD:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+}
+
+.containerCARD {
+	transition: all .2s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  position: relative;
+  width: 23.5%;
+	padding: 6px 6px;
+    background-image: linear-gradient( rgb(99, 66, 187), rgb(23, 17, 30));
+    height: auto;
+}
+
+.imageCARD {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlayCARD{
+  cursor: pointer;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:  rgba(156, 51, 255, .70)
+;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerCARD:hover .overlayCARD {
+  bottom: 0;
+  height: 100%;
+}
+.textCARD {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imgcard{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  /* FlexBoxo*/
+.flex-container {
+  margin-left: 5%;
+  width: 90%;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+  
+  .flex-container > div {
+    width: 70%;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+  }
+#info{
+  margin-top: 10%;
+  width: 90%;
+  left: 50%;
+  margin-left: 5%;
+}
+  #nosotros{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+.social-bar {
+  width: 100%;
+  background-color: rgb(57, 0, 77);
+  overflow: auto;
+}
+
+.social-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.social-bar a:hover {
+  background-color: rgb(94, 0, 128);
+}
+i {
+	transition: all .2s ease-in-out;
+}
+.social-bar a i:hover{
+-ms-transform: scale(1.4); /* IE 9 */
+ -webkit-transform: scale(1.4); /* Safari 3-8 */
+ transform: scale(1.4); 
+}
+.containerText {
+			margin-top: 4px;
+		margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
