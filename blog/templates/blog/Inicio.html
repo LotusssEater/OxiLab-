@@ -7,15 +7,13 @@
 <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
 <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
 <link rel="stylesheet" href="{% static 'css/fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css' %}">
+<script src="{%static 'JS/jquery-3.4.1.js'%}"></script>
+<script src="{%static 'JS/bootstrap-3.3.7-dist/js/bootstrap.min.js'%}"></script>
 
 <link rel="icon" href="IMG/obeats.png" sizes="48x48" />
 <link href="CSS/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
 <link href="fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet" type="text/css" />
-<link href="CSS/sidebar.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="CSS/inicio.css" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
-<script src="JS/jquery-3.4.1.js"></script>
-<script src="bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -182,7 +180,7 @@
 <a id="scrollup" href="#section1"><i class="fas fa-angle-double-up"></i></a> <br />
 <div id="reproductor_visualizador">
     <audio controls id="reproductor">
-        <source id="cancion" src="songs/Ｄｅｓｐａｃｉｔｏ － Ｖａｐｏｒｗａｖｅ.mp3" type="audio/mpeg">
+        <source id="cancion" src="{%static 'Songs/Ｄｅｓｐａｃｉｔｏ － Ｖａｐｏｒｗａｖｅ.mp3'%}" type="audio/mpeg">
     </audio>
 </div>
 <br> 
@@ -207,7 +205,8 @@
 Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical</div>
     <br>
 </footer>
-<script src="JS/Containers_Interact.js"></script> 
-<script src="JS/main.js"></script>
+<script src="{%static 'JS/Containers_Interact.js'%}"></script> 
+<script src="{%static 'JS/main.js'%}"></script>
+
 </body>
 </html>
