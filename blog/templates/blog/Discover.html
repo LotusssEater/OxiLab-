@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +98,7 @@
     <div> 
         <!-- samp[lessssss] -->
         <div class="flex-container-samples" style="background-color: rgb(49, 12, 85)">
-            <div class="containerSample" onclick="Reproductor()"> <img src="IMG/covers/urban.jpg" alt="Avatar" class="imageSample">
+            <div class="containerSample" onclick="Reproductor()"> <img src="{% static 'IMG/Urban.jpg' %}" alt="Avatar" class="imageSample">
                 <div class="overlaySample">
                     <p class="textSample">Urban Sample Pack</p>
                 </div>
