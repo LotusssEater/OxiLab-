@@ -17,3 +17,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        permissions = (
+            ('admin', ('Administrador OxiLab')),
+            ('artista', ('Artista OxiLab')),
+        )
