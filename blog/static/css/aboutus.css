@@ -79,15 +79,14 @@
   /* FlexBoxo*/
 .flex-container {
   margin-left: 5%;
-  width: 90%;
+  width: 100%;
   flex-direction: row;
   display: flex;
   justify-content: flex-start;
   
 }
-  
   .flex-container > div {
-    width: 70%;
+    width: 33%;
     margin-top: 10px;
     text-align: center;
     line-height: 30px;
