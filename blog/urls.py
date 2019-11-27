@@ -1,9 +1,13 @@
 from django.conf.urls import url
+from django.urls import path
 from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.post_list),
-    url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
-    url(r'^$', views.AboutUs),
+    path('', views.Inicio, name='Inicio'),
+    path('AboutUs/', views.AboutUs, name='AboutUs'),
+    path('Comunity/', views.Comunity, name='Comunity'),
+    path('Discover/', views.Discover, name='Discover'),
+    path('Login/', views.Login, name='Login'),
+    path('Signup/', views.Signup, name='Signup'),
 ]

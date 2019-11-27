@@ -1,64 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <title>OxiLab | Registro</title>
 <link rel="icon" href="IMG/obeats.png" sizes="48x48">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
-<link href="CSS/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
-<link href="fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" media="screen" href="CSS/signup.css">
-<link href="CSS/sidebar.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
-</head>
+
 
 <body>
-<div id="sidebar">
-    <div class="toggle-btn">
-        <div class="containerLogo" onclick="myFunction(this);AbrirMenu()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-    <div id="lateral_derecho">
-        <ul>
-            <li> <a class="tooltippd" href="perfil.html"><i class="fas fa-user-circle"></i><span
-              class="tooltiptext">Perfil</span></a> </li>
-            <li> <a class="tooltippd" href="Signup.html"><i class="fa fa-power-off"></i><span
-              class="tooltiptext">Cerrar Sesion</span></a> </li>
-        </ul>
-    </div>
-    <ul>
-        <li> <a class="tooltip" href="Inicio.html"><i class="fas fa-home"></i><span
-            class="tooltiptext">Inicio</span></a> </li>
-        <li> <a class="tooltip" href="Comunity.html"><i class="fas fa-globe"></i><span
-            class="tooltiptext">Comunidad</span></a> </li>
-        <li> <a class="tooltip" href="Discover.html"><i class="fas fa-search"></i> <span class="tooltiptext">Explorar</span></a> </li>
-        <li> <a class="tooltip" href="Login.html"><i class="far fa-address-card"></i><span
-              class="tooltiptext">Iniciar Secion</span></a> </li>
-        <li> <a class="tooltip" href="Signup.html"><i class="far fa-address-book"></i><span
-              class="tooltiptext">Registrar</span></a> </li>
-    </ul>
-</div>
-<header class="sticky">
-    <a href="AboutUs.html">
-        <img id="logo" src="IMG/oxilab_icon.png" alt="logoxilab">
-    </a>
-    <div class="topnav">  
-        <a href="#home">Inicio</a>
-  <a href="#about">Novedades</a>
-  <a href="#contact">Nosotros</a>
-        <div class="search-container">
-            <form id="search-form" action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-</header>
+{% block content %} 
 <div class="titulos">
     <h2 style="padding-top: 10px">Registro</h2>
 </div>
@@ -89,25 +38,8 @@
       <div class="vacio" style="height: 500px">
     
     </div>
-<footer id="foot"> <br>
-    <div class="foot_izquierdo">
-        <h3>El miguel la chupa!</h3><br>
-        El miguel la chupa, y bastante, todo el dia chupando y robando waifus.
-    </div>
-    <div class="foot_centro">
-        <img id="icono_footer" src="IMG/oxilab_icon.png" alt="logoxilab">
-        <div class="social-bar-foot">
-            <a href="https://m.facebook.com/login/?locale2=es_ES" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.youtube.com/?hl=es-419&gl=CL" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn?" target="_blank"><i class="fab fa-spotify"></i></a> 
-    </div>
-    </div>
-    <div class="foot_derecho"><h3 >Importante!</h3><br>
-Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical</div>
-    <br>
-</footer>
-<script src="JS/signup.js"></script>
+
+<script src="{%static 'JS/signup.js' %}"></script>
+{% endblock %}
 </body>
 </html>
