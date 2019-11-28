@@ -51,7 +51,7 @@
     </div>
 
     <header class="sticky"> <a><img id="logo" src="{% static 'IMG/oxilab_icon.png'%}" alt="logoxilab"> </a>
-        <div class="topnav"> <a href="#section1">Inicio</a> <a href="{% url 'Discover'  %}">Novedades</a> <a href="{% url 'AboutUs'  %}">Nosotros</a>
+        <div class="topnav"> <a href="#section1">Inicio</a> <a href="{% url 'post_list'  %}">Novedades</a> <a href="{% url 'AboutUs'  %}">Nosotros</a>
             <div class="search-container">
                 <form autocomplete="off" action="/search.html">
                     <div class="autocomplete">
@@ -78,7 +78,7 @@
         <div class="foot_izquierdo">
             <h3>Equipo de Desarrollo "oxilab"</h3><br>
             <a href="{% url 'AboutUs'  %}" style="color: aliceblue">Conoce al Equipo de Desarrollo</a><br>
-            <a href="{% static url 'Login' %}" style="color: aliceblue">Pagina en proceso</a>
+            <a href="{% url 'Login' %}" style="color: aliceblue">Pagina en proceso</a>
         </div>
         <div class="foot_centro">
             <img id="icono_footer" src="{%static 'IMG/oxilab_icon.png'%}" alt="logoxilab">
@@ -95,6 +95,7 @@
         </div>
         <br>
     </footer>
+    <script src="{%static 'JS/main.js'%}"></script>
 </body>
 
 </html>

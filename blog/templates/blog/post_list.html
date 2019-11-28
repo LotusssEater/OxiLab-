@@ -1,20 +1,24 @@
 {% extends 'blog/base.html' %}
-<html>
-    <head>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
         <title>Oxilab | Comunity </title>
-    </head>
     <body>
         {% block content %}
-        <div>
-            <h1><a href="/">Comunity Posts</a></h1>
+        <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+        <div  id="section2" class="titulos">
+            <h2 style="padding-top: 10px">Post</h2>
         </div>
-            {% for post in posts %}
-            <div>
-                <p> publicado: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p> 
+            <div class="flex-container-pl">
+                {% for post in posts %}
+                <div>
+                    <p id="titulo-post"><a href="">{{ post.title }}</a></p>
+                    <p id="fecha-post"> publicado: {{ post.published_date }}</p>
+                    <br>
+                    <p>{{ post.text|linebreaksbr }}</p> 
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         {% endblock %}
     </body>
 </html>
