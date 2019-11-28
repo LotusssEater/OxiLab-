@@ -26,9 +26,10 @@ p{
     font-size: 180%;
   }
   #titulo-post a:hover{
-    color: #150324;
+    cursor: pointer; /* Add a pointer on hover */
     font-size: 180%;
   }
   #fecha-post{
       font-size: 50%;
   }
+
