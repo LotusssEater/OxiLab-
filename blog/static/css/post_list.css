@@ -32,4 +32,7 @@ p{
   #fecha-post{
       font-size: 50%;
   }
-
+  .contenedor_post{
+    padding: 40px;
+    margin: 15px;
+  }
