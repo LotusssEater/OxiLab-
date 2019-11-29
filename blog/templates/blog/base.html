@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
     
     <link rel="stylesheet" href="{% static 'css/fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css' %}">
@@ -50,10 +49,10 @@
         </ul>
     </div>
 
-    <header class="sticky"> <a><img id="logo" src="{% static 'IMG/oxilab_icon.png'%}" alt="logoxilab"> </a>
+    <header class="sticky"> <a href=""><img id="logo" src="{% static 'IMG/oxilab_icon.png'%}" alt="logoxilab"> </a>
         <div class="topnav"> <a href="#section1">Inicio</a> <a href="{% url 'post_list'  %}">Novedades</a> <a href="{% url 'AboutUs'  %}">Nosotros</a>
             <div class="search-container">
-                <form autocomplete="off" action="/search.html">
+                <form autocomplete="off" action="/">
                     <div class="autocomplete">
 
                         <input id="myInput" type="text" placeholder="Search.." name="search">
@@ -91,7 +90,7 @@
         </div>
         </div>
         <div class="foot_derecho"><h3 >Importante!</h3><br>
-            Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical
+            Oxilab no aloja absolutamente nada del material expuesto en sus servidores, cumplimos la funcion de buscador de enlaces publicos relacionados con el ambito musical
         </div>
         <br>
     </footer>

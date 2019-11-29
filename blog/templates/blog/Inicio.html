@@ -1,10 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-        <title>OxiLab | Inicio</title>
-<body>
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
 <div id="coaching">
     <div class="togglec-btn">
         <div class="containerLogo" onclick="myFunction(this)">
@@ -133,5 +130,3 @@
 <br>
 <script src="{%static 'JS/Containers_Interact.js'%}"></script> 
 {% endblock %}
-</body>
-</html>

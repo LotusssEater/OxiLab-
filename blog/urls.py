@@ -1,10 +1,12 @@
 from django.conf.urls import url
 from django.urls import path
 from . import views
+from django.contrib import admin
 
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
+    path('admin/', admin.site.urls, name='adm'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('Inicio/', views.Inicio, name='Inicio'),
     path('AboutUs/', views.AboutUs, name='AboutUs'),
