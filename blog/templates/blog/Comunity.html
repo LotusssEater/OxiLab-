@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-        {% block content %}
-    <link href="{% static 'css/comunity.css' %}" rel="stylesheet" type="text/css" />
+{% block content %}
+<link href="{% static 'css/comunity.css' %}" rel="stylesheet" type="text/css" />
 <div id="section1" class="descripcion">
     <p>Una pequena muestra de los ultimos agregados en los distintos generos mas visitados en nuestra comunidad</p>
 </div>
@@ -201,6 +201,7 @@
             <div>24</div>
         </div>
     </div>
+
 <br>
 <script src="{%static 'JS/comunity.js' %}"></script>
 {% endblock %}

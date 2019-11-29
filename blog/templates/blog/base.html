@@ -50,7 +50,7 @@
     </div>
 
     <header class="sticky"> <a href=""><img id="logo" src="{% static 'IMG/oxilab_icon.png'%}" alt="logoxilab"> </a>
-        <div class="topnav"> <a href="#section1">Inicio</a> <a href="{% url 'post_list'  %}">Novedades</a> <a href="{% url 'AboutUs'  %}">Nosotros</a>
+        <div class="topnav"> <a href="#section1">Inicio</a> <a href="{% url 'post_list'  %}">Novedades</a> <a href="{% url 'AboutUs'  %}">Nosotros</a>{% if user.is_authenticated %}<a href="{% url 'post_new'  %}">Nuevo Post</a>{% endif %}
             <div class="search-container">
                 <form autocomplete="off" action="/">
                     <div class="autocomplete">

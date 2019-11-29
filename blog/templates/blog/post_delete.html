@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% for post in posts %}
+    <div>
+        <p id="titulo-post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+        <p id="fecha-post"> publicado: {{ post.published_date }}</p>
+        <br>
+        <p>{{ post.text|linebreaksbr }}</p> 
+    </div>
+    {% endfor %}
+{% endblock %}    
