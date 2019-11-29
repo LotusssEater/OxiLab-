@@ -240,10 +240,9 @@ justify-content: center;
   transition: all 200ms linear;
 }
 #reproductor_visualizador.active{
-  left: 0px;
-  
-  /* position: sticky; */
+  left: 0%;
 }
+
 #reproductor{
   margin-left: 5%;
   margin-right: 5%;
