@@ -12,7 +12,7 @@
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
             <!--<input id="username" class="input-field" type="text" placeholder="Username" name="user" onBlur="ValidarUsuario()">-->
-            <div id="user" class="infield" onBlur="ValidarUsuario()">{{form.username}}</div>
+            <div id="user" class="infield">{{form.username}}</div>
             <i id="user_error" class="far fa-times-circle icon"></i> </div>
         <div class="input-container"> <i class="fa fa-envelope icon"></i>
             <!--<input id="email" class="input-field" type="text" placeholder="Email" name="email" onBlur="ValidarEmail()">-->
@@ -20,7 +20,7 @@
             <i id="email_error" class="far fa-times-circle icon"></i> </div>
         <div class="input-container"> <i class="fa fa-key icon"></i>
             <!--<input id="password" class="input-field" type="password" placeholder="Password" name="psw" onBlur="ValidarPassword()">-->
-            <div id="psw" class="infield" onBlur="ValidarPassword()">{{form.password2}}</div>
+            <div id="psw" class="infield">{{form.password2}}</div>
             <i id="pass_error" class="far fa-times-circle icon"></i> </div>
         <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
@@ -36,5 +36,3 @@
 
 <script src="{%static 'JS/signup.js' %}"></script>
 {% endblock %}
-</body>
-</html>
