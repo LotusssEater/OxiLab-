@@ -1,18 +1,29 @@
 from django.conf.urls import url
 from django.urls import path
-from . import views
+from . import views as myviews
+from django.contrib.auth import views as views_auth
+from django.conf.urls import url, include
+from rest_framework import routers
+from blog.quickstart import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 
 urlpatterns = [
-    path('Inicio/', views.Inicio, name='Inicio'),
-    path('', views.post_list, name='post_list'),
-    path('post/new', views.post_new, name='post_new'),
-    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-    path('post/<int:pk>/', views.post_detail, name='post_detail'),
-    path('post/<pk>/remove/', views.post_remove, name='post_remove'),
-    path('AboutUs/', views.AboutUs, name='AboutUs'),
-    path('Comunity/', views.Comunity, name='Comunity'),
-    path('Discover/', views.Discover, name='Discover'),
-    path('Login/', views.Login, name='Login'),
-    path('Signup/', views.Signup, name='Signup'),
+    path('Inicio/', myviews.Inicio, name='Inicio'),
+    path('', myviews.post_list, name='post_list'),
+    path('post/new', myviews.post_new, name='post_new'),
+    path('post/<int:pk>/edit/', myviews.post_edit, name='post_edit'),
+    path('post/<int:pk>/', myviews.post_detail, name='post_detail'),
+    path('post/<pk>/remove/', myviews.post_remove, name='post_remove'),
+    path('AboutUs/', myviews.AboutUs, name='AboutUs'),
+    path('Comunity/', myviews.Comunity, name='Comunity'),
+    path('Discover/', myviews.Discover, name='Discover'),
+    path('Login/', views_auth.LoginView.as_view(template_name='blog/Login.html'), name='Login'),
+    path('Logout/', views_auth.LogoutView.as_view(next_page='Inicio'), name='Logout'),
+    path('Signup/', myviews.Signup, name='Signup'),
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

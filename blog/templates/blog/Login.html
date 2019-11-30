@@ -8,17 +8,21 @@
 </div>
 
 <div class="flex-container">
-    <form id="login-form"  method="POST">
+    <form id="login-form"  method="POST" action="{% url 'Login' %}">
+        {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
-            <input id="user" class="input-field" type="text" placeholder="Username" name="user">
+            <!--<input id="user" class="input-field" type="text" placeholder="Username" name="user">-->
+            <div id="user" class="infield">{{form.username}}</div>
             <i id="user_error" class="far fa-times-circle icon"></i> </div>
         <div class="input-container"> <i class="fa fa-key icon"></i>
-            <input id="psw" class="input-field" type="password" placeholder="Password" name="psw" onBlur="ValidarUsuario()">
+            <!--<input id="psw" class="input-field" type="password" placeholder="Password" name="psw" onBlur="ValidarUsuario()">-->
+            <div id="psw" class="infield">{{form.password}}</div>
             <i id="pass_error" class="far fa-times-circle icon"></i> </div>
         <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
-        </div>
-        <button class="btn" >Login</button>
+        </div> 
+        <button class="btn" type="submit" href="{% url 'Inicio' %}" >Login</button>
+        <input type="hidden" name="next" value="{{ next }}" />
     </form>
 </div>
 <div class="vacio" style="height: 500px"> </div>
