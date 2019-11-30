@@ -22,10 +22,16 @@
             <!--<input id="password" class="input-field" type="password" placeholder="Password" name="psw" onBlur="ValidarPassword()">-->
             <div id="psw" class="infield">{{form.password2}}</div>
             <i id="pass_error" class="far fa-times-circle icon"></i> </div>
+        <!--<div class="input-container"> <i class="fa fa-key icon"></i>
+            <input id="Cpsw" class="input-field" type="password" placeholder="Confirmar Password" name="Cpsw" onBlur="ValidarPasswordIgual()">
+            <i id="c_pass_error" class="far fa-times-circle icon"></i> </div>
+        <div class="input-container"> <i class="fa fa-mobile-alt icon"></i>
+            <input id="num" class="input-field" type="text" placeholder="+569 " name="num" onBlur="ValidarNumero()">
+            <i id="num_error" class="far fa-times-circle icon"></i> </div>-->
         <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
         </div>
-        <button class="btn">Registrar</button>
+        <button class="btn">Register</button>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
 </div>
