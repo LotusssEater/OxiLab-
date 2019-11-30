@@ -1,55 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>OxiLab | Comunity</title>
-<link rel="icon" href="IMG/obeats.png" sizes="48x48" />
-<link href="CSS/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
-<link href="fontawesome-free-5.10.2-web/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet" type="text/css" />
-<link href="CSS/comunity.css" rel="stylesheet" type="text/css" />
-<link href="CSS/sidebar.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="sidebar">
-    <div class="toggle-btn">
-        <div class="containerLogo" onclick="myFunction(this);AbrirMenu()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-    <div id="lateral_derecho">
-        <ul>
-            <li> <a class="tooltippd" href="perfil.html"><i class="fas fa-user-circle"></i><span
-              class="tooltiptext">Perfil</span></a> </li>
-            <li> <a class="tooltippd" href="Signup.html"><i class="fa fa-power-off"></i><span
-              class="tooltiptext">Cerrar Sesion</span></a> </li>
-        </ul>
-    </div>
-    <ul>
-        <li> <a class="tooltip" href="Inicio.html"><i class="fas fa-home"></i><span
-            class="tooltiptext">Inicio</span></a> </li>
-        <li> <a class="tooltip" href="Comunity.html"><i class="fas fa-globe"></i><span
-            class="tooltiptext">Comunidad</span></a> </li>
-        <li> <a class="tooltip" href="Discover.html"><i class="fas fa-search"></i> <span class="tooltiptext">Explorar</span></a> </li>
-        <li> <a class="tooltip" href="Login.html"><i class="far fa-address-card"></i><span
-              class="tooltiptext">Iniciar Secion</span></a> </li>
-        <li> <a class="tooltip" href="Signup.html"><i class="far fa-address-book"></i><span
-              class="tooltiptext">Registrar</span></a> </li>
-    </ul>
-</div>
-<header class="sticky"> <a href="AboutUs.html"> <img id="logo" src="IMG/oxilab_icon.png" alt="logoxilab"> </a>
-    <div class="topnav"> <a href="#home">Inicio</a> <a href="#about">Novedades</a> <a href="#contact">Nosotros</a>
-        <div class="search-container">
-            <form action="/google.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-</header>
-<div class="descripcion">
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<title>OxiLab | Comunidad</title>
+<link href="{% static 'css/comunity.css' %}" rel="stylesheet" type="text/css" />
+<div id="section1" class="descripcion">
     <p>Una pequena muestra de los ultimos agregados en los distintos generos mas visitados en nuestra comunidad</p>
 </div>
 <div class="titulos" >
@@ -57,35 +11,35 @@
 </div>
 <div  class="Artistas_populares">
     <div class="flex-container-ye">
-        <div class="containerArtist"> <img src="IMG/kina%20'%20get%20u%20the%20moon(ft%20snow).jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/getuthemoon.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Kina<br>
                     -<br>
                     Get U The Moon</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/burgos%20'%20every%20step%20of%20the%20guey.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/burgos.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Burgos<br>
                     -<br>
                     Every Step Of The Guey</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/trap%20-%20low%20key%20-%20suicideboys.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/lowkey.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Suicide Boys<br>
                     -<br>
                     Lowkey</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/peacock%20affect%20'%20who%20cares%20if%20you%20exist.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/jp_whocares.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Peacock Affect<br>
                     -<br>
                     Who Cares If You Exist</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/trap%20-%20sus%20-%20scale$.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/sus-scales.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Scale$<br>
                     -<br>
@@ -99,35 +53,35 @@
 </div>
 <div  class="Artistas_populares">
     <div class="flex-container-ye">
-        <div class="containerArtist"> <img src="IMG/Alternativa-Eclipse-InnerWave.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Alternativa-Eclipse-InnerWave.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">InnerWave<br>
                     -<br>
                     Eclipse</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Alternativa_Nagashi_Idealism.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Alternativa_Nagashi_Idealism.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Nagashi<br>
                     -<br>
                     Idelism</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Alternativa_Smooth_JackStauber.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Alternativa_Smooth_JackStauber.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Jack Stauber<br>
                     -<br>
                     Smooth</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Alternativa_Sungazing_JoyAgain.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Alternativa_Sungazing_JoyAgain.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Joy Again<br>
                     -<br>
                     Sungazing</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Garage_ArticMonkeys_505.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Garage_ArticMonkeys_505.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Arctic Monkeys<br>
                     -<br>
@@ -141,35 +95,35 @@
 </div>
 <div  class="Artistas_populares">
     <div class="flex-container-ye">
-        <div class="containerArtist"> <img src="IMG/howsla.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/howsla.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">OWSLA<br>
                     -<br>
                     HOWSLA MIX-TAPE</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Imgone.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Imgone.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">JOYRYDE<br>
                     -<br>
                     I'M GONE</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/NoRedemption.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/NoRedemption.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Tchami and Malaa<br>
                     -<br>
                     No Redemption</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Flume<br>
                     -<br>
                     Friends</div>
             </div>
         </div>
-        <div class="containerArtist"> <img src="IMG/troyboi.jpg" alt="Avatar" class="imageArtist">
+        <div class="containerArtist"> <img src="{% static 'IMG/troyboi.jpg' %}" alt="Avatar" class="imageArtist">
             <div class="overlayArtist">
                 <div class="textArtist-ye">Troyboi<br>
                     -<br>
@@ -187,7 +141,7 @@
     <div class="ultimos-agregados">
         <div class="flex-container-ua">
             <div>1</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -198,7 +152,7 @@
             <div>4</div>
             <div>5</div>
             <div>6</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -207,7 +161,7 @@
             </div>
             <div>8</div>
             <div>9</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -220,7 +174,7 @@
             <div>14</div>
             <div>15</div>
             <div>16</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -228,7 +182,7 @@
                 </div>
             </div>
             <div>18</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -236,7 +190,7 @@
                 </div>
             </div>
             <div>20</div>
-            <div class="containerua"> <img src="IMG/Friends.jpg" alt="Avatar" class="imageua">
+            <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
                 <div class="overlayua">
                     <div class="textua">
                     Flume<br>-<br>Friends
@@ -248,21 +202,7 @@
             <div>24</div>
         </div>
     </div>
+
 <br>
-<footer id="foot"> <br>
-    <div class="foot_izquierdo">
-        <h3>El miguel la chupa!</h3>
-        <br>
-        El miguel la chupa, y bastante, todo el dia chupando y robando waifus. </div>
-    <div class="foot_centro"> <img id="icono_footer" src="IMG/oxilab_icon.png" alt="logoxilab">
-        <div class="social-bar-foot"> <a href="https://m.facebook.com/login/?locale2=es_ES" target="_blank"><i class="fab fa-facebook-square"></i></a> <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a> <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-discord"></i></a> <a href="https://www.youtube.com/?hl=es-419&gl=CL" target="_blank"><i class="fab fa-youtube"></i></a> <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn?" target="_blank"><i class="fab fa-spotify"></i></a> </div>
-    </div>
-    <div class="foot_derecho">
-        <h3 >Importante!</h3>
-        <br>
-        Oxilab no aloja absolutamente nada del material expuesto en sus servidores, complimos la funcion de buscador de enlaces publicos relacionados con el ambito musical</div>
-    <br>
-</footer>
-<script src="JS/comunity.js"></script>
-</body>
-</html>
+<script src="{%static 'JS/comunity.js' %}"></script>
+{% endblock %}

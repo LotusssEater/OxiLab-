@@ -92,6 +92,7 @@
         background-image: linear-gradient(rgb(85, 49, 184), rgb(99, 66, 187), rgb(99, 66, 187));
     }
     .topnav {
+        height: 54px;
         overflow: hidden;
         background-color: rgba(81, 52, 155, 0.57);
     }
@@ -130,7 +131,7 @@
         margin-bottom: 10px;
         margin-right: 16px;
         background: #ddd;
-        font-size: 17px;
+        font-size: 19px;
         border: none;
         cursor: pointer;
     }
@@ -432,11 +433,15 @@
         font-size: 100%;
     }
     @media (max-width: 1080px) {
+        .topnav .search-container button {
+            font-size: 19px;
+        }
         .aaa {display: none}
         .flex-container-ua > div {margin: 5px;}
     }
     /*850px*/
     @media (max-width: 850px) {
+        .topnav input[type=text] {max-width: 200px;}
         #logo { width: 130px }
         #Oxilab {font-size: 270%;}
         .sticky {height: 95px;}
@@ -470,10 +475,9 @@
         .textSong {font-size: 13px;line-height: 13px;}
         .textCARD {font-size: 30px;line-height: 28px;}
     }
-    /*550px*/
-    @media (max-width: 550px) {
-        .topnav {height: 55px;}
-        .topnav input[type=text] {width: 100px;}
+    /*570px*/
+    @media (max-width: 570px) {
+        /* .topnav input[type=text] {display: none;} */
         #sidebar i {font-size: 80%;}
         .flex-container-ye > div {margin: 2px;}
         .flex-container-ua > div {margin: 2px;width: 150px;height: 150px;}

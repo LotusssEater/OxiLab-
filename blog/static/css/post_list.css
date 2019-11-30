@@ -1,0 +1,38 @@
+/* CSS Document */
+p{
+    color: aliceblue;
+}
+.flex-container-pl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flex-container-pl > div {
+      padding: 10px;
+    background-color: #150324;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+  }
+  .flex-container-pl > div:hover {
+    background-color: #b7a4c7;
+
+  }
+  #titulo-post a{
+    color: aliceblue;
+    font-size: 180%;
+  }
+  #titulo-post a:hover{
+    cursor: pointer; /* Add a pointer on hover */
+    font-size: 180%;
+  }
+  #fecha-post{
+      font-size: 50%;
+  }
+  .contenedor_post{
+    padding: 40px;
+    margin: 15px;
+  }

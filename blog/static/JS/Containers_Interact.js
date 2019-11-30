@@ -1,7 +1,8 @@
 // JavaScript Document
 
-function Reproducir(){ 
-    document.getElementById("reproductor_visualizador").classList.toggle("active");
+function Reproducir(repro){ 
+    document.getElementById(repro).classList.toggle("active");
+    // document.getElementById(song).classList.toggle("active");
 
 }
 function ParaArtistas(){ 
