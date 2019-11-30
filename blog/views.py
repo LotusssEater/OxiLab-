@@ -3,6 +3,8 @@ from .models import Post
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 from .forms import PostForm
 
 # Create your views here.
@@ -63,4 +65,15 @@ def Login(request):
     return render(request, 'blog/Login.html')     
 
 def Signup(request):
-    return render(request, 'blog/Signup.html')       
+    form = UserCreationForm()
+    form.fields['username'].help_text = None
+    form.fields['password1'].help_text = None
+    form.fields['password2'].help_text = None
+    if request.method == "POST":
+        form = UserCreationForm(data=request.POST)
+        if form.is_valid():
+            user = form.save()
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+    return render(request, "blog/Signup.html", {'form': form})     
