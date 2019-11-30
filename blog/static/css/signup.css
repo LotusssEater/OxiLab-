@@ -1,8 +1,11 @@
 /* Aplicar en todos los HTML */
 
 #registro-form{
-    max-width:500px;
-    margin:auto;
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  position: absolute;
+  margin-top: -25%;
 }
   /* asldjkhalsdkjfhgjasdfgkajhsdgfjahsdgfjhagsdf */
     #WARNING {

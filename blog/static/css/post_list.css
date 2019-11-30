@@ -18,8 +18,8 @@ p{
     line-height: 20px;
   }
   .flex-container-pl > div:hover {
-    background-color: #b7a4c7;
-
+    background-color: #e7cef5;
+    color: rgb(22, 22, 22);
   }
   #titulo-post a{
     color: aliceblue;
