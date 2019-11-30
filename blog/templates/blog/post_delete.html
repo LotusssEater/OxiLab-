@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
 {% block content %}
+<title>OxiLab | Borrar Post</title>
 {% for post in posts %}
     <div>
         <p id="titulo-post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
