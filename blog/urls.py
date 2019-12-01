@@ -24,6 +24,7 @@ urlpatterns = [
     path('Login/', views_auth.LoginView.as_view(template_name='blog/Login.html'), name='Login'),
     path('Logout/', views_auth.LogoutView.as_view(next_page='Inicio'), name='Logout'),
     path('Signup/', myviews.Signup, name='Signup'),
+    path('Perfil/', myviews.Signup, name='Perfil'),
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

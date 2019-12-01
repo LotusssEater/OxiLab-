@@ -1,9 +1,5 @@
 /* Aplicar en todos los HTML */
 
-  #login-form{
-      max-width:500px;
-      margin:auto;
-  }
   #Usuario_Invalido{
     display: none;
     color: red;

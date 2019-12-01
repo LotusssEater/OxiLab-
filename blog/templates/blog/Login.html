@@ -7,8 +7,8 @@
     <h2 style="padding-top: 10px">Inicia Sesion</h2>
 </div>
 
-<div class="flex-container">
-    <form id="login-form"  method="POST" action="{% url 'Login' %}">
+<div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 80%;padding: 20px;">
+    <form method="POST" action="{% url 'Login' %}">
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
             <!--<input id="user" class="input-field" type="text" placeholder="Username" name="user">-->

@@ -64,6 +64,9 @@ def Discover(request):
 def Login(request):
     return render(request, 'blog/Login.html')     
 
+def Perfil(request):
+    return render(request, 'blog/Perfil.html')       
+
 def Signup(request):
     form = UserCreationForm()
     form.fields['username'].help_text = None
@@ -76,4 +79,5 @@ def Signup(request):
             if user is not None:
                 login(request, user)
                 return redirect('/')
-    return render(request, "blog/Signup.html", {'form': form})  
+    return render(request, "blog/Signup.html", {'form': form})  \
+  

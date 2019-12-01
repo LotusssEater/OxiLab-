@@ -1,25 +1,59 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-        {% block content %}
-        <title>OxiLab | Novedades</title>
-        <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
-        <div  id="section2" class="titulos">
-            <h2 style="padding-top: 10px">Post</h2>
+{% block content %}
+<script type="text/javascript" src="https://www.viralpatel.net/demo/jquery/jquery.shorten.1.0.js"></script>
+<title>OxiLab | Novedades</title>
+<link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+<div id="section2" class="titulos">
+    <h2 style="padding-top: 10px">Post</h2>
+</div>
+<div class="flex-container-pl">
+    {% for post in posts %}
+    <div>
+        <p id="titulo-post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+        <p id="fecha-post"> publicado: {{ post.published_date }}</p>
+        <br>
+        <div class="comment">
+            <p>{{ post.text}}</p>
+            <!-- <p>{{ post.text|slice:"100"}}</p> -->
         </div>
-            <div class="flex-container-pl">
-                {% for post in posts %}
-                <div>
-                    <p id="titulo-post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
-                    <p id="fecha-post"> publicado: {{ post.published_date }}</p>
-                    <br>
-                    <div>
-                        <p>{{ post.text|linebreaksbr }}</p> 
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="vacio" style="height: 500px"> </div>
-            <script src="{%static 'JS/post_list.js'%}"></script> 
-        {% endblock %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="vacio" style="height: 500px"> </div>
+
+<script type="text/javascript">
+$(".comment").shorten({
+	"showChars" : 140
+});
 
 
+$(".comment").shorten({
+	"showChars" : 150,
+	"moreText"	: "See More",
+});
+
+$(".comment").shorten({
+	"showChars" : 50,
+	"moreText"	: "See More",
+	"lessText"	: "Less",
+});
+</script>
+<style>
+    a.morelink {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .morecontent span {
+        display: none;
+    }
+
+    .comment {
+        width: 100%;
+        border: aliceblue;
+    }
+</style>
+<script src="{%static 'JS/post_list.js'%}"></script>
+{% endblock %}

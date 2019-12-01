@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<title>OxiLab | Perfil</title>
+<div  id="section2" class="titulos">
+    <h2 style="padding-top: 10px">Usuario: {{ user.get_username }}</h2>
+</div>
+<div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 80%;padding: 20px;"> 
+    {{ user.get_username }}
+</div>
+<div class="vacio" style="height: 500px"></div>
+{% endblock %}
