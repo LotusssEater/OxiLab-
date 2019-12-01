@@ -28,25 +28,25 @@
         <div id="lateral_derecho">
             <ul>
                 <li> <a class="tooltippd" href="{% url 'Login'  %}"><i class="fas fa-user-circle"></i><span
-                    class="tooltiptext">Perfil {{user.get_username}}</span></a></li>
+                    class="tooltiptext" style="width: 130px; text-align: center;">Perfil: {{user.get_username}}</span></a></li>
                     {% if user.is_authenticated %}
                     <li><a class="tooltippd" href="{% url 'Logout' %}"><i class="fas fa-power-off"></i><span
-                                class="tooltiptext">Cerrar Sesion User: {{ user.get_username }}</span></a></li>   
+                                class="tooltiptext" style="width: 130px; text-align: center;">Cerrar Sesion User: {{ user.get_username }}</span></a></li>   
                                {% else %}
                     <li><a class="tooltippd" href="{% url 'Login' %}"><i class="fas fa-user-circle"></i><span
-                                class="tooltiptext">Iniciar Secion</span></a></li>    
+                                class="tooltiptext" style="width: 130px; text-align: center;">Iniciar Secion</span></a></li>    
                     {% endif %}   
             </ul>
         </div>
         <ul>
             <li> <a class="tooltip" href="{% url 'Inicio'  %}"><i class="fas fa-home"></i><span
-                        class="tooltiptext">Inicio</span></a> </li>
+                        class="tooltiptext" style="width: 130px; text-align: center;">Inicio</span></a> </li>
             <li> <a class="tooltip" href="{% url 'Comunity'  %}"><i class="fas fa-globe"></i><span
-                        class="tooltiptext">Comunidad</span></a> </li>
+                        class="tooltiptext" style="width: 130px; text-align: center;">Comunidad</span></a> </li>
             <li> <a class="tooltip" href="{% url 'Discover'  %}"><i class="fas fa-search"></i> <span
-                        class="tooltiptext">Explorar</span></a> </li>          
+                        class="tooltiptext" style="width: 130px; text-align: center;">Explorar</span></a> </li>          
             <li> <a class="tooltip" href="{% url 'Signup'  %}"><i class="far fa-address-book"></i><span
-                        class="tooltiptext">Registrar</span></a> </li>
+                        class="tooltiptext" style="width: 130px; text-align: center;">Registrar</span></a> </li>
         </ul>
     </div>
 
