@@ -172,6 +172,9 @@
     <p>Ultimos agregados en la pagina (ciclo de 24hrs)</p>
 </div>
     <div class="ultimos-agregados">
+        <div style="display: flex; justify-content: center; margin: auto; height: 60px;width:90%;padding: 5%;">
+                <div class="gcse-searchbox-only" data-resultsUrl="https://cse.google.com/cse?cx=002275355000324779128:cvu907ss83w" target="_blank"></div>    
+        </div>
         <div class="flex-container-ua">
             <div>1</div>
             <div class="containerua"> <img src="{% static 'IMG/Friends.jpg' %}" alt="Avatar" class="imageua">
@@ -237,5 +240,17 @@
     </div>
 
 <br>
+<style>
+.flex-container-ua{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container-ua> div {
+    width: 250px;
+    height: 250px;
+
+}
+</style>
 <script src="{%static 'JS/comunity.js' %}"></script>
 {% endblock %}

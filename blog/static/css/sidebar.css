@@ -89,7 +89,7 @@
         z-index: 1;
         position: sticky;
         top: 0px;
-        background-image: linear-gradient(rgb(85, 49, 184), rgb(99, 66, 187), rgb(99, 66, 187));
+        background-image: linear-gradient(rgb(85, 49, 184), #6342bb, rgb(99, 66, 187));
     }
     .topnav {
         height: 54px;
