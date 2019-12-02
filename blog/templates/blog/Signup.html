@@ -6,13 +6,13 @@
 <div class="titulos">
     <h2 style="padding-top: 10px">Registro</h2>
 </div>
-
-<div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 80%;padding: 20px;">
-    <form  method="POST" action="{% url 'Signup' %}">
+<div id="overlay"></div>
+<div  style="display: flex; justify-content: center; margin: auto; height: 300px;width: 24%;padding: 20px;">
+    <form id="formulario" method="POST" action="{% url 'Signup' %}">
         <!--{{ form.as_p }}-->
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
-            <div>{{form.username}}</div></div>
+            <div >{{form.username}}</div></div>
 
         <div class="input-container"> <i class="fa fa-key icon"></i>
             <div>{{form.password1}}</div> </div>
@@ -32,11 +32,37 @@
 <div class="vacio" style="height: 500px"></div>
 
 <style>
-input{
-    height: 90%;
+#id_username,
+#id_password1,
+#id_password2{height: 90%;}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 </style>
+<script>
+// function on() {
+//   document.getElementById("overlay").style.display = "block";
+// }
 
+// function off() {
+//   document.getElementById("overlay").style.display = "none";
+// }
+$(document).ready(function(){
+  $("formulario").click(function(){
+    $("overlay").slideToggle();
+  });
+});
+</script>
 
 <script src="{%static 'JS/signup.js' %}"></script>
 {% endblock %}

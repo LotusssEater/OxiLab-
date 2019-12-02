@@ -3,6 +3,7 @@ from django.urls import path
 from . import views as myviews
 from django.contrib.auth import views as views_auth
 from django.conf.urls import url, include
+from django.contrib import admin
 
 from rest_framework import routers
 from blog.quickstart import views
@@ -14,6 +15,7 @@ router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     path('Inicio/', myviews.Inicio, name='Inicio'),
+    path('Search/', myviews.Inicio, name='Search'),
     path('', myviews.post_list, name='post_list'),
     path('post/new', myviews.post_new, name='post_new'),
     path('post/<int:pk>/edit/', myviews.post_edit, name='post_edit'),

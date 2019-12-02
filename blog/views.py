@@ -66,7 +66,10 @@ def Login(request):
     return render(request, 'blog/Login.html')     
 
 def Perfil(request):
-    return render(request, 'blog/Perfil.html')       
+    return render(request, 'blog/Perfil.html')  
+         
+def Search(request):
+    return render(request, 'blog/Search.html')   
 
 def Signup(request):
     form = UserCreationForm()
