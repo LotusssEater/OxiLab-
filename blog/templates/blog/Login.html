@@ -1,6 +1,8 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
 {% block content %}
+{% load socialaccount %}
+{% providers_media_js %}
 <title>OxiLab | Inicio de Sesion</title>
 <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css" />
 <div class="titulos">
@@ -24,8 +26,11 @@
             <p id="WARNING">Mayusculas Activas</p>
         </div>
         <button class="btn" type="submit" href="{% url 'Inicio' %}">Login</button>
+        <a href="{% provider_login_url 'google' %}" style="color: white; font-size: 50px; padding-left: 41.7%;padding-right: 41.7%;"><i class="fab fa-google"></i></a>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
+    <div>
+    </div>
 </div>
 
 <div class="vacio" style="height: 500px"> </div>
