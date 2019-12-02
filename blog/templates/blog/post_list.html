@@ -14,30 +14,14 @@
         <p id="titulo-post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
         <p id="fecha-post"> publicado: {{ post.published_date }} | por: {{post.author}}</p>
         <br>
-        <p class="comment" >{{ post.text}}</p>
+        <p class="comment">{{ post.text}}</p>
     </div>
     {% endfor %}
 </div>
 
 <div class="vacio" style="height: 500px"> </div>
 
-<script type="text/javascript">
-$(".comment").shorten({
-	"showChars" : 200
-});
 
-
-$(".comment").shorten({
-	"showChars" : 150,
-	"moreText"	: "See More",
-});
-
-$(".comment").shorten({
-	"showChars" : 50,
-	"moreText"	: "See More",
-	"lessText"	: "Less",
-});
-</script>
 <style>
     a.morelink {
         text-decoration: none;
@@ -52,25 +36,46 @@ $(".comment").shorten({
         width: 100%;
         border: aliceblue;
     }
+
     .flex-container-pl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .flex-container-pl > div {
-      padding: 10px;
-    background-color: #150324;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    text-align: center;
-    line-height: 20px;
-  }
-  .flex-container-pl > div:hover {
-    background-color: #e7cef5;
-    color: rgb(22, 22, 22);
-  }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex-container-pl > div {
+        padding: 10px;
+        background-color: #150324;
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .flex-container-pl > div:hover {
+        background-color: #e7cef5;
+        color: rgb(22, 22, 22);
+    }
 </style>
+
+
+<script type="text/javascript">
+    $(".comment").shorten({
+        "showChars": 200
+    });
+
+
+    $(".comment").shorten({
+        "showChars": 150,
+        "moreText": "See More",
+    });
+
+    $(".comment").shorten({
+        "showChars": 50,
+        "moreText": "See More",
+        "lessText": "Less",
+    });
+</script>
 <script src="{%static 'JS/post_list.js'%}"></script>
 {% endblock %}

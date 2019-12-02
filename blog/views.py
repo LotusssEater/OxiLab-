@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from .forms import PostForm
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import User
 from django.contrib.auth import login
 
 # Create your views here.
@@ -73,11 +74,11 @@ def Signup(request):
     form.fields['password1'].help_text = None
     form.fields['password2'].help_text = None
     if request.method == "POST":
-        form = UserCreationForm(data=request.POST)
+        form = UserCreationForm(data=request.POST) 
         if form.is_valid():
             user = form.save()
             if user is not None:
                 login(request, user)
                 return redirect('/')
-    return render(request, "blog/Signup.html", {'form': form})  \
+    return render(request, "blog/Signup.html", {'form': form})
   

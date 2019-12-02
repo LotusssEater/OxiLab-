@@ -15,10 +15,11 @@
         {% if user.is_superuser %}
         <a href="{% url 'post_edit' pk=post.pk %}" style="color: aliceblue; font-size: 200%;"><i class="fas fa-edit"></i></a>
         <a href="{% url 'post_remove' pk=post.pk %}" style="color: aliceblue; font-size: 200%;"><i class="fas fa-minus-circle"></i></a>
-        {% endif %}
-        {% if user.is_authenticated and user == post.author %}
+        {% elif user.is_authenticated and user == post.author %}
         <a href="{% url 'post_edit' pk=post.pk %}" style="color: aliceblue; font-size: 200%;"><i class="fas fa-edit"></i></a>
         <a href="{% url 'post_remove' pk=post.pk %}" style="color: aliceblue; font-size: 200%;"><i class="fas fa-minus-circle"></i></a>
+        {% else %}
+        <p>----</p>
         {% endif %}
     </div>
 </div>

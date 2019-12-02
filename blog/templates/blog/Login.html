@@ -12,24 +12,38 @@
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
             <!--<input id="user" class="input-field" type="text" placeholder="Username" name="user">-->
-            <div id="user" class="infield">{{form.username}}</div>
-            <i id="user_error" class="far fa-times-circle icon"></i> </div>
+            <div>{{form.username}}</div>
+            <i id="user_error" class="far fa-times-circle icon"></i>
+        </div>
         <div class="input-container"> <i class="fa fa-key icon"></i>
             <!--<input id="psw" class="input-field" type="password" placeholder="Password" name="psw" onBlur="ValidarUsuario()">-->
-            <div id="psw" class="infield">{{form.password}}</div>
-            <i id="pass_error" class="far fa-times-circle icon"></i> </div>
+            <div>{{form.password}}</div>
+            <i id="pass_error" class="far fa-times-circle icon"></i>
+        </div>
         <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
-        </div> 
-        <button class="btn" type="submit" href="{% url 'Inicio' %}" >Login</button>
+        </div>
+        <button class="btn" type="submit" href="{% url 'Inicio' %}">Login</button>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
 </div>
+
 <div class="vacio" style="height: 500px"> </div>
+
 <style>
-    input{
+    input {
         height: 90%;
     }
-    </style>
+
+    .input-container {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+</style>
+
+
 <script src="{%static 'JS/login.js' %}"></script>
 {% endblock %}

@@ -3,6 +3,7 @@ from django.urls import path
 from . import views as myviews
 from django.contrib.auth import views as views_auth
 from django.conf.urls import url, include
+
 from rest_framework import routers
 from blog.quickstart import views
 
