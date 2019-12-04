@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 
 ]
 
@@ -132,8 +133,11 @@ LOGIN_REDIRECT_URL='Inicio'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+#SOCIAL_AUTH_FACEBOOK_KEY = '581670692645140'  # App ID
+#SOCIAL_AUTH_FACEBOOK_SECRET = '85f52d560d83a40d41afe2318a3bb543'  # App Secret
 
 AUTHENTICATION_BACKENDS = (
+
     'django.contrib.auth.backends.ModelBackend',
 
     'allauth.account.auth_backends.AuthenticationBackend',

@@ -62,11 +62,11 @@ def Comunity(request):
 def Discover(request):
     return render(request, 'blog/Discover.html') 
 
-def Login(request):
-    return render(request, 'blog/Login.html')     
-
 def Perfil(request):
     return render(request, 'blog/Perfil.html')  
+    
+def Login(request):
+    return render(request, 'blog/Login.html')     
          
 def Search(request):
     return render(request, 'blog/Search.html')   

@@ -1,13 +1,22 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-
 {% block content %}
 <title>OxiLab | Perfil</title>
 <div  id="section2" class="titulos">
     <h2 style="padding-top: 10px">Usuario: {{ user.get_username }}</h2>
 </div>
-<div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 80%;padding: 20px;"> 
-    {{ user.get_username }}
+<div style="display: flex;flex-direction: row; justify-content: center; margin: auto; height: auto;width: 80%;padding: 20px;"> 
+    <div id="foto">
+        <img src="{%static 'IMG/yorichi_profile.png' %}" alt="">
+    </div>
+    <div id="contenido" style="display: flex;flex-direction: column; margin-left: 10px;color: azure;">
+        <div><p>Usuario: {{ user.get_username }}</p> </div>
+        <br>
+        <div><p>Email: {{ user.email}}</p> </div>
+        <br>
+        <div><p>Nombre: {{ user.first_name}} {{ user.last_name}}</p> </div>
+        <br>
+    </div>
 </div>
 <div class="vacio" style="height: 500px"></div>
 {% endblock %}

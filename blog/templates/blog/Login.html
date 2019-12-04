@@ -9,7 +9,7 @@
     <h2 style="padding-top: 10px">Inicia Sesion</h2>
 </div>
 
-<div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 80%;padding: 20px;">
+<div style="display: flex; justify-content: center; margin: auto; height: 150px;width: 80%;padding: 20px;">
     <form method="POST" action="{% url 'Login' %}">
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon"></i>
@@ -22,20 +22,32 @@
             <div>{{form.password}}</div>
             <i id="pass_error" class="far fa-times-circle icon"></i>
         </div>
-        <div class="input-container">
-            <p id="WARNING">Mayusculas Activas</p>
+        <div class="input-container" style="margin-bottom: 0px;">
+            <p id="WARNING" style="width: 100%;">Mayusculas Activas</p>
         </div>
         <button class="btn" type="submit" href="{% url 'Inicio' %}">Login</button>
-        <a href="{% provider_login_url 'google' %}" style="color: white; font-size: 50px; padding-left: 41.7%;padding-right: 41.7%;"><i class="fab fa-google"></i></a>
+        <br>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
     <div>
     </div>
 </div>
+<div style="display: flex;flex-direction: row;width: 98%; justify-content: center;padding: 1%;">
+    <a href="{% provider_login_url 'google' %}" style="color: white; font-size: 50px; margin: 10px;"><i class="fab fa-google"></i></a>
+    <a href="{% provider_login_url 'facebook' method='js_sdk' %}" style="color: white; font-size: 50px; margin: 10px;"><i class="fab fa-facebook"></i></a>
+</div>
 
 <div class="vacio" style="height: 500px"> </div>
 
 <style>
+    i{
+        transition: all .2s ease-in-out;
+    }
+    i:hover {
+        -ms-transform: scale(1.4); /* IE 9 */
+        -webkit-transform: scale(1.4); /* Safari 3-8 */
+        transform: scale(1.4);
+    }
     input {
         height: 90%;
     }

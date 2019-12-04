@@ -21,10 +21,14 @@
             <div>{{form.password2}}</div></div>
 
 
-        <div class="input-container">
+        <div class="input-container" style="margin: 0px;">
             <p id="WARNING">Mayusculas Activas</p>
         </div>
         <button class="btn">Register</button>
+        <p>Si ya esta registrado puedes iniciar sesion aqui</p>
+        <div style="display: flex;flex-direction: row; justify-content: center;">
+                <a href="{% url 'Login' %}" style="color: white; font-size: 50px; margin: 10px;"><i class="fas fa-user-circle"></i></a>
+            </div>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
 </div>
@@ -48,6 +52,14 @@
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
+i{
+        transition: all .2s ease-in-out;
+    }
+    i:hover {
+        -ms-transform: scale(1.4); /* IE 9 */
+        -webkit-transform: scale(1.4); /* Safari 3-8 */
+        transform: scale(1.4);
+    }
 </style>
 <script>
 // function on() {
