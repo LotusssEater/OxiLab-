@@ -7,6 +7,7 @@ from .forms import PostForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import User
 from django.contrib.auth import login
+from django.contrib import messages
 
 # Create your views here.
 
@@ -81,7 +82,7 @@ def Signup(request):
         if form.is_valid():
             user = form.save()
             if user is not None:
-                login(request, user)
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                 return redirect('/')
     return render(request, "blog/Signup.html", {'form': form})
   

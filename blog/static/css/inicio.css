@@ -1,70 +1,7 @@
 
-#coaching {
-      z-index: 1;
-  text-align: center;
-  position: fixed;
-  width: 50%;
-  height: 28%;
-  bottom: 0%;
-  border-right: 1px solid rgba(100, 100, 100, 0.3);
-  background: rgb(37, 26, 54, 0.9);
-  left: -50%;
-  transition: all 300ms linear;
-  border-radius: 5px;
-}
-
-/* la accion*/
-#coaching.active {
-  left: 0px;
-}
-
-/* el boton*/
-#coaching .togglec-btn {
-  position: absolute;
-  left: 102%;
-  top: 20px;
-  cursor: pointer;
-}
-
-#remixes .toggler-btn {
-  position: absolute;
-  right: 102%;
-  top: 20px;
-  cursor: pointer;
-}
-
-#remixes.active {
-  right: 0px;
-}
-
-#remixes {
-      z-index: 1;
-  text-align: center;
-  position: fixed;
-  width: 50%;
-  height: 28%;
-  bottom: 0%;
-  border-right: 1px solid rgba(100, 100, 100, 0.3);
-  background: rgb(37, 26, 54, 0.9);
-  right: -50%;
-  transition: all 300ms linear;
-  border-radius: 5px;
-}
-
 /* ##################################################### */
 
 /* ##################################################### */
-
-
-
-#Coach_and_Remix_Panel {
-  background-color: #d3d7e0;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-}
-        
 
 .box {
   margin: 1px auto;
@@ -74,72 +11,7 @@
 
 /* ##################### CARTAS ######################### */
 
-.flex-container-ye {
-justify-content: center;
-  display: flex;
-  flex-wrap: row wrap;
-} 
-.flex-container-ye > div {
-  flex-grow: 8;
-  width: 300px;
-  height: auto;
-  margin: 10px;
-  text-align: center;
-  line-height: 35px;
-  font-size: 30px;
-}
 
-.containerSong:hover {
-  -ms-transform: scale(1.02); /* IE 9 */
-  -webkit-transform: scale(1.02); /* Safari 3-8 */
-  transform: scale(1.02); 
-}
-
-.containerSong {
-	transition: all .2s ease-in-out;
-  margin-left: 10px;
-  margin-right: 10px;
-  float: left;
-  position: relative;
-  width: 23.5%;
-}
-
-.imageSong {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlaySong {
-  cursor: pointer;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color:  rgba(156, 51, 255, .70)
-;
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-
-.containerSong:hover .overlaySong {
-  bottom: 0;
-  height: 100%;
-}
-
-.textSong {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 /*#################################### ARTISTAS ###################################################*/
 .containerArtist:hover {
@@ -182,7 +54,7 @@ justify-content: center;
 
 .textArtist {
   color: white;
-  font-size: 20px;
+  font-size: 30%;
   position: absolute;
   top: 50%;
   left: 50%;

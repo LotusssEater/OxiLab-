@@ -19,61 +19,67 @@
 
         <div class="input-container"> <i class="fa fa-key icon"></i>
             <div>{{form.password2}}</div></div>
-
-
-        <div class="input-container" style="margin: 0px;">
+        <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
         </div>
         <button class="btn">Register</button>
-        <p>Si ya esta registrado puedes iniciar sesion aqui</p>
-        <div style="display: flex;flex-direction: row; justify-content: center;">
-                <a href="{% url 'Login' %}" style="color: white; font-size: 50px; margin: 10px;"><i class="fas fa-user-circle"></i></a>
-            </div>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
 </div>
 
 <div class="vacio" style="height: 500px"></div>
-
 <style>
-#id_username,
-#id_password1,
-#id_password2{height: 90%;}
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-i{
+    input {
+        height: 90%;
+    }
+
+    .input-container {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    #id_username,
+    #id_password1,
+    #id_password2 {
+        height: 90%;
+    }
+
+    i {
         transition: all .2s ease-in-out;
     }
+
     i:hover {
-        -ms-transform: scale(1.4); /* IE 9 */
-        -webkit-transform: scale(1.4); /* Safari 3-8 */
+        -ms-transform: scale(1.4);
+        /* IE 9 */
+        -webkit-transform: scale(1.4);
+        /* Safari 3-8 */
         transform: scale(1.4);
+    }
+
+    .btn-reg {
+        background-color: dodgerblue;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.9;
     }
 </style>
 <script>
-// function on() {
-//   document.getElementById("overlay").style.display = "block";
-// }
+    // function on() {
+    //   document.getElementById("overlay").style.display = "block";
+    // }
 
-// function off() {
-//   document.getElementById("overlay").style.display = "none";
-// }
-$(document).ready(function(){
-  $("formulario").click(function(){
-    $("overlay").slideToggle();
-  });
-});
+    // function off() {
+    //   document.getElementById("overlay").style.display = "none";
+    // }
+    $(document).ready(function () {
+        $("formulario").click(function () {
+            $("overlay").slideToggle();
+        });
+    });
 </script>
 
 <script src="{%static 'JS/signup.js' %}"></script>

@@ -3,27 +3,6 @@
 {% block content %}
 <title>OxiLab | Inicio</title>
 <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
-<div id="coaching">
-    <div class="togglec-btn">
-        <div class="containerLogo" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-    <p> panel Coach </p>
-</div>
-<!-- asdsdfsdfgsdgfhsdfgsdgf -->
-<div id="remixes">
-    <div class="toggler-btn">
-        <div class="containerLogo" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-    <p> panel Remix </p>
-</div>
 <div class="descripcion">
     <p style="margin-left: 20px;margin-right: 20px;"> Crea, Comparte y Descubre nuevos Artistas junto con sus ultimos lanzamientos. <br>
         Noticias y Novedades relacionados a tus artistas favoritos </p>
@@ -147,4 +126,71 @@
 
 <br> 
 <br>
+<style>
+    .flex-container-ye {
+justify-content: center;
+  display: flex;
+  flex-wrap: row wrap;
+} 
+.flex-container-ye > div {
+  flex-grow: 8;
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 60%;
+  /* font-size: 30px; */
+}
+.containerSong:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+}
+
+.containerSong {
+	transition: all .2s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  position: relative;
+  width: 23.5%;
+}
+
+.imageSong {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlaySong {
+  cursor: pointer;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:  rgba(156, 51, 255, .70)
+;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerSong:hover .overlaySong {
+  bottom: 0;
+  height: 100%;
+}
+
+.textSong {
+  color: white;
+  font-size: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
 {% endblock %}
