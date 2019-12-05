@@ -17,13 +17,6 @@
 	  margin-bottom: 10px;
 }
 
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
 #user_error,
 #pass_error,
 #c_pass_error,
@@ -40,22 +33,7 @@
 #num_error.icon{
 	background: red;
 }
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
 
-.input-field {
-  padding: 10px;
-  outline: none;
-}
-
-.input-field:focus {
-  border: 2px solid dodgerblue;
-}
 
 /* Set a style for the submit button */
 .btn {

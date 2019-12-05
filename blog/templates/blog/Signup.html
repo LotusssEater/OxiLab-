@@ -9,7 +9,6 @@
 <div id="overlay"></div>
 <div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 30%;padding: 10px;">
     <form id="formulario" method="POST" action="{% url 'Signup' %}">
-        <!--{{ form.as_p }}-->
         {% csrf_token %}
         <div class="input-container"> <i class="fa fa-user icon icono"></i>
             <div>{{form.username}}</div>
@@ -23,7 +22,7 @@
             <div>{{form.password2}}</div>
         </div>
         {% if messages %}
-        <div style="display: flex; justify-content: center; height: auto;" class="messages">
+        <div style="display: flex; justify-content: center; margin: auto; height: 300px;width: 30%;padding: 10px;" class="messages">
             {% for message in messages %}
             <div class="alert alert-info">
                 <strong>Notificacion</strong>
