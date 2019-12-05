@@ -84,7 +84,7 @@
     </footer>
 </body>
 <style>
-    @media screen and (max-width: 600px) {
+    /* @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -104,7 +104,7 @@
     display: block;
     text-align: left;
   }
-}
+} */
 
     .topnav .search-container button {
         font-size: 19.6px;
@@ -135,9 +135,11 @@
     }
 
     .topnav {
+        display: flex;
         background-color: rgba(81, 52, 155, 0.57);;
         overflow: hidden;
         height: 52px;
+        justify-content: center;
     }
 
     /* Style the links inside the navigation bar */
@@ -162,6 +164,17 @@
     /* Hide the link that should open and close the topnav on small screens */
     .topnav .icon {
         display: none;
+    }
+    i {
+        transition: all .2s ease-in-out;
+    }
+
+    i:hover {
+        -ms-transform: scale(1.1);
+        /* IE 9 */
+        -webkit-transform: scale(1.1);
+        /* Safari 3-8 */
+        transform: scale(1.1);
     }
 </style>
 

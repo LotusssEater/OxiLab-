@@ -18,7 +18,14 @@
             <div>{{form.password1}}</div> </div>
 
         <div class="input-container"> <i class="fa fa-key icon"></i>
-            <div>{{form.password2}}</div></div>
+            <div>{{form.password2}}</div></div> 
+            {% if messages %}
+            <div style="display: flex; justify-content: center;" class="messages">
+                {% for message in messages %}
+                    <div style="color: aliceblue;" class="{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}  
         <div class="input-container">
             <p id="WARNING">Mayusculas Activas</p>
         </div>
@@ -51,11 +58,11 @@
     }
 
     i:hover {
-        -ms-transform: scale(1.4);
+        -ms-transform: scale(1.1);
         /* IE 9 */
-        -webkit-transform: scale(1.4);
+        -webkit-transform: scale(1.1);
         /* Safari 3-8 */
-        transform: scale(1.4);
+        transform: scale(1.1);
     }
 
     .btn-reg {

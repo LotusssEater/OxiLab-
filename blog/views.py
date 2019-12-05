@@ -80,9 +80,12 @@ def Signup(request):
     if request.method == "POST":
         form = UserCreationForm(data=request.POST) 
         if form.is_valid():
-            user = form.save()
+            user = form.save()    
             if user is not None:
                 login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-                return redirect('/')
+                messages.success(request, 'Registro exitoso')  
+                return redirect('Signup')
+            else:
+                messages.warning(request, 'Ocurrio un error, Verifique la contrasena')        
     return render(request, "blog/Signup.html", {'form': form})
   
