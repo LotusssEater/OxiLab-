@@ -2,14 +2,16 @@
 {% load staticfiles %}
 {% block content %}
 <title>OxiLab | Editar</title>
-<h2 style="margin-left: 20px; margin-top: 20px; color: aliceblue;">New post</h2>
+<div class="titulos">
+        <h2 style="color: aliceblue;">New post</h2>
+</div>
 <div class="posteos" style=" padding-left: 20px; display: block; width: 90%;">
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
         <!-- display: block; margin-left: auto; margin-right: auto;  -->
 
-        <button type="submit" class="save btn btn-default" style="width: 100px;margin-left: 115px;"><p>Save</p></button>
+        <button type="submit" class="btn" style="width: 100px;margin-left: 47px;"><p>Save</p></button>
     </form>
 </div>
 <div class="vacio" style="height: 500px"> </div>

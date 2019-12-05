@@ -1,15 +1,3 @@
-/* Aplicar en todos los HTML */
-
-  /* asldjkhalsdkjfhgjasdfgkajhsdgfjahsdgfjhagsdf */
-    #WARNING {
-	  text-align: center;
-	  border: solid 3PX;
-	  width: 100%;
-	  display:none;
-	  color:red;
-	  margin-bottom: 10px;
-}
-  
 
 .input-container {
   display: -ms-flexbox; /* IE10 */
