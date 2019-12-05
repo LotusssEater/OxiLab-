@@ -2,7 +2,8 @@
 {% load staticfiles %}
 {% block content %}
 <title>OxiLab | Perfil</title>
-<div id="section2" class="titulos">
+{% if user.is_authenticated %}
+            <div id="section2" class="titulos">
     <h2 style="padding-top: 10px;color: aliceblue;">Usuario: {{ user.get_username }}</h2>
 </div>
 <div style="display: flex; flex-direction: column;">
@@ -40,6 +41,12 @@
     </div>
 
 </div>
+    {% else %}
+    <div style="display: flex; justify-content: center; margin: 140px; flex-direction: column;">
+            <img src="https://i.pinimg.com/originals/78/79/ca/7879caa555212c0e2466c193a4a65590.jpg" alt="">
+            <p>Creo intentaste acceder a una pagina a la cual aun no puedes acceder, intenta <a href="{% url 'Login'  %}">  Iniciando sesion</a></p>
+    </div>
+    {% endif %}
 
 <div class="vacio" style="height: 500px"></div>
 <style>
