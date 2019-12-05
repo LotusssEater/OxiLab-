@@ -2,10 +2,9 @@
 
 /* Aplicar en todos los HTML */
 .flex-container-ye {
-justify-content: center;
+  justify-content: center;
   display: flex;
-  flex-wrap: row wrap;
-} 
+}
 .flex-container-ye > div {
   width: 300px;
   height: auto;
@@ -16,7 +15,7 @@ justify-content: center;
 }
 
 .containerArtist {
-	transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-left: 10px;
   margin-right: 10px;
   float: left;
@@ -26,7 +25,7 @@ justify-content: center;
 .containerArtist:hover {
   -ms-transform: scale(1.02); /* IE 9 */
   -webkit-transform: scale(1.02); /* Safari 3-8 */
-  transform: scale(1.02); 
+  transform: scale(1.02);
 }
 .imageArtist {
   display: block;
@@ -39,11 +38,11 @@ justify-content: center;
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color:  rgba(102, 0, 102, .70);
+  background-color: rgba(102, 0, 102, 0.7);
   overflow: hidden;
   width: 100%;
-  height:0;
-  transition: .5s ease;
+  height: 0;
+  transition: 0.5s ease;
 }
 
 .containerArtist:hover .overlayArtist {
@@ -53,7 +52,7 @@ justify-content: center;
 
 .textArtist-ye {
   color: white;
-  font-size: 20px;
+  font-size: 20%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +63,7 @@ justify-content: center;
 }
 
 .containerua {
-	transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-left: 10px;
   margin-right: 10px;
   float: left;
@@ -74,7 +73,7 @@ justify-content: center;
 .containerua:hover {
   -ms-transform: scale(1.02); /* IE 9 */
   -webkit-transform: scale(1.02); /* Safari 3-8 */
-  transform: scale(1.02); 
+  transform: scale(1.02);
 }
 .imageua {
   display: block;
@@ -87,11 +86,11 @@ justify-content: center;
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color:  rgba(102, 0, 102, .70);
+  background-color: rgba(102, 0, 102, 0.7);
   overflow: hidden;
   width: 100%;
-  height:0;
-  transition: .5s ease;
+  height: 0;
+  transition: 0.5s ease;
 }
 
 .containerua:hover .overlayua {
@@ -111,7 +110,7 @@ justify-content: center;
   text-align: center;
 }
 
-.titulos{
+.titulos {
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: rgba(97, 63, 124, 0.4);
@@ -121,13 +120,12 @@ justify-content: center;
   padding-top: 1%;
   text-align: center;
 }
-.titulos h2{
+.titulos h2 {
   text-align: center;
   background-color: rgba(145, 39, 231, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.3);
   /*margin-left:40%;
   margin-right: 40%;*/
   padding-top: 5px;
-  padding-bottom: 5px 
+  padding-bottom: 5px;
 }
-

@@ -1,10 +1,5 @@
 
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
+
 
 #user_error,
 #pass_error,
