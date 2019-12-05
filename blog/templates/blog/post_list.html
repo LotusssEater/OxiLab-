@@ -4,9 +4,10 @@
 <script type="text/javascript" src="https://www.viralpatel.net/demo/jquery/jquery.shorten.1.0.js"></script>
 <title>OxiLab | Novedades</title>
 <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
-<div id="section2" class="titulos">
-    <h2 style="padding-top: 10px;color: white;">Post</h2>
-</div>
+<div class="titulos">
+        <h2 id="section1" style="margin-top: 0px;
+        margin-bottom: 0px;color: aliceblue;"> Publicaciones</h2>
+    </div>
 
 <div class="flex-container-pl">
     {% for post in posts %}
@@ -43,7 +44,7 @@
         justify-content: center;
     }
 
-    .flex-container-pl > div {
+    .flex-container-pl>div {
         padding: 10px;
         background-color: #150324;
         width: 300px;
@@ -51,11 +52,11 @@
         margin: 10px;
         text-align: center;
         line-height: 20px;
+        border-radius: 15px 50px 30px;
     }
 
     .flex-container-pl > div:hover {
-        background-color: #e7cef5;
-        color: rgb(22, 22, 22);
+        background-color: #592b74;
     }
 </style>
 
