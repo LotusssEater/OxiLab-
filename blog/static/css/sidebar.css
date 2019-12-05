@@ -19,6 +19,7 @@
         width: 100%;
     }
     .titulos {
+        color: white;
         margin-top: 15px;
         margin-bottom: 15px;
         background-color: rgba(97, 63, 124, 0.4);
@@ -32,8 +33,7 @@
         text-align: center;
         background-color: rgba(145, 39, 231, 0.4);
         border: 2px solid rgba(255, 255, 255, 0.3);
-        /*margin-left:40%;
-      margin-right: 40%;*/
+        color: white;
         padding-top: 5px;
         padding-bottom: 5px
     }

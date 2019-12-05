@@ -8,7 +8,7 @@
         Noticias y Novedades relacionados a tus artistas favoritos </p>
 </div>
 <div class="titulos">
-    <h2 id="section1" style="padding-top: 10px">Mas escuchadas</h2>
+    <h2 id="section1" style="padding-top: 10px;color: white;">Mas escuchadas</h2>
 </div>
 <a id="scrolldown" href="#section2" ><i class="fa fa-angle-double-down"></i></a> <br>
 <br>
@@ -44,7 +44,7 @@
 </div>
 <br>
 <div class="titulos">
-    <h2 id="section2" style="padding-top: 10px">Artistas Populares</h2>
+    <h2 id="section2" style="padding-top: 10px;color: white;">Artistas Populares</h2>
 </div>
 <br>
 <div class="Artistas_populares" style="background-color: rgb(70, 30, 109)">
@@ -116,7 +116,7 @@
     </div>
 </div>
 <br>
-<a id="scrollup" href="#section1"><i class="fas fa-angle-double-up"></i></a> <br />
+<a id="scrollup" href="#section1"><i class="fas fa-angle-double-up"></i></a> <br/>
 
 <div id="reproductor_visualizador" style="height: 300px; opacity:0.8;">
     <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" 
@@ -139,7 +139,7 @@ justify-content: center;
   margin: 10px;
   text-align: center;
   line-height: 60%;
-  /* font-size: 30px; */
+  font-size: 30px;
 }
 .containerSong:hover {
   -ms-transform: scale(1.02); /* IE 9 */
@@ -184,6 +184,55 @@ justify-content: center;
 .textSong {
   color: white;
   font-size: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerArtist:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+}
+.containerArtist {
+	transition: all .2s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  position: relative;
+  width: 23.5%;
+}
+
+.imageArtist {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlayArtist {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:  rgba(102, 0, 102, .70);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerArtist:hover .overlayArtist {
+  bottom: 0;
+  height: 100%;
+}
+
+.textArtist {
+  color: white;
+  font-size: 60%;
   position: absolute;
   top: 50%;
   left: 50%;

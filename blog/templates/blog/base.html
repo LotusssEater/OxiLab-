@@ -25,19 +25,19 @@
             <a href="/"><img id="logo" src="{% static 'IMG/oxilab_icon.png'%}" alt="logoxilab" a></a>
         </div>
         <div class="topnav" id="myTopnav">
-            <a href="{% url 'Inicio'  %}"><i class="fas fa-home"></i></a>
-            <a href="{% url 'Comunity'  %}"><i class="fas fa-globe"></i></a>
-            <a href="{% url 'Discover'  %}"><i class="fas fa-search"></i> </a>
-            <a href="{% url 'post_list'  %}"><i class="fas fa-th-list"></i></a>
-            <a href="{% url 'Signup'  %}"><i class="far fa-address-book"></i></a>
+            <a href="{% url 'Inicio'  %}" data-toggle="tooltip" data-placement="bottom" title="Inicio"><i class="fas fa-home"></i></a>
+            <a href="{% url 'Comunity'  %}" data-toggle="tooltip" data-placement="bottom" title="Comunidad"><i class="fas fa-globe"></i></a>
+            <a href="{% url 'Discover'  %}" data-toggle="tooltip" data-placement="bottom" title="Explorar"><i class="fas fa-search"></i> </a>
+            <a href="{% url 'post_list'  %}" data-toggle="tooltip" data-placement="bottom" title="Publicaciones"><i class="fas fa-th-list"></i></a>
+            <a href="{% url 'Signup'  %}" data-toggle="tooltip" data-placement="bottom" title="Registro"><i class="far fa-address-book"></i></a>
             {% if user.is_authenticated %}
-            <a href="{% url 'post_new'  %}"><i class="fas fa-plus-circle"></i></a>
+            <a href="{% url 'post_new'  %}" data-toggle="tooltip" data-placement="bottom" title="Nuevo Post"><i class="fas fa-plus-circle"></i></a>
             {% endif %}
             {% if user.is_authenticated %}
-            <a href="{% url 'Perfil'  %}"><i class="fas fa-user"></i></a>
-            <a href="{% url 'Logout'  %}"><i class="fas fa-power-off"></i></a>
+            <a href="{% url 'Perfil'  %}" data-toggle="tooltip" data-placement="bottom" title="Perfil"><i class="fas fa-user"></i></a>
+            <a href="{% url 'Logout'  %}" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesion"><i class="fas fa-power-off"></i></a>
             {% else %}
-            <a href="{% url 'Login'  %}"><i class="fas fa-user-circle"></i></a>
+            <a href="{% url 'Login'  %}" data-toggle="tooltip" data-placement="bottom" title="Iniciar Sesion"><i class="fas fa-user-circle"></i></a>
             {% endif %}
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
@@ -193,5 +193,5 @@
 <script src="{%static 'JS/main.js'%}"></script>
 <script src="{%static 'JS/Containers_Interact.js'%}"></script>
 <script src="search-script.js" type="text/javascript"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </html>
