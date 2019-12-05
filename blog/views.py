@@ -63,7 +63,6 @@ def Comunity(request):
 def Discover(request):
     return render(request, 'blog/Discover.html') 
 
-
 def Perfil(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/Perfil.html', {'posts':posts})
